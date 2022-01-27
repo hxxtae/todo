@@ -23,18 +23,19 @@
 
             <section class="todo-user">
               <!-- 로그인 이전 -->
-              <form id="joinForm" class="join" action="">
+              <form id="joinForm" class="join">
                 <div class="todo-user-benar">
                   <img src="./src/assets/images/below-the-plants.jpg" alt="기본 로그인 이미지">
                 </div>
                 <div class="todo-user-join">
-                  <input type="text" class="todo-user-input" placeholder="please input your name...">
-                  <button type="button">login</button>
+                  <input type="text" class="todo-user-input" name="username" placeholder="please input your name..." autocomplete="off" require>
+                  <p aria-label="에러 메세지"></p>
                 </div>
+                <button type="submit">login</button>
               </form>
 
                   <!-- 로그인 이후 -->
-              <form id="todoForm" class="login" action="">
+              <form id="todoForm" class="login">
                 <div class="todo-user-avatar">
                   <div class="avatar-102">
                     <img src="" alt="사용자 이미지">
@@ -155,6 +156,7 @@
 
   <div class="overlay" aria-hidden></div>
 
-  <script src="./src/js/app.js"></script>
+  <script type="module" src="./src/js/login.js"></script>
+  <script src="./src/js/join.js"></script>
 </body>
 </html>
