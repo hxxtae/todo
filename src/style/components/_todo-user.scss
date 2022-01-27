@@ -54,7 +54,7 @@
       margin-bottom: 20px;
     }
 
-  &-data {
+  &-login {
     @include columns-flexbox();
 
     .todo-user-name {
@@ -79,14 +79,12 @@
         }
       }
     }
-
-    
   }
 
   @include responsive('T') {
     align-self: flex-start;
 
-    &-data {
+    &-login {
 
       .todo-user-name {
         margin-bottom: 40px;
