@@ -3,6 +3,19 @@
   margin-bottom: 40px;
   @include flexbox();
 
+  .join.is-hidden {
+    display: none;
+  }
+
+  .login {
+    display: none;
+
+    &.is-active {
+      display: block;
+    }
+  }
+
+  // 로그인 이전
   &-benar {
     width: 200px;
     margin: 0 auto;
@@ -49,6 +62,7 @@
     }
   }
 
+  // 로그인 이후
   &-avatar {
     @include flexbox();
       margin-bottom: 20px;
@@ -64,8 +78,11 @@
       &::after {
         content: '님 반갑습니다.'
       }
+    }
 
-      & + textarea {
+    .todo-component {
+
+      textarea {
         display: block;
         width: 100%;
         padding: 10px;
@@ -73,12 +90,41 @@
         background-color: transparent;
         border: 1px solid $border;
         border-radius: 8px;
+        margin-bottom: 20px;
 
         &::placeholder {
           opacity: 0.4;
         }
       }
-    }
+
+      .todo-enter {
+        width: 100%;
+  
+        button {
+          width: 100%;
+          padding: 10px;
+          border: 1px solid $border;
+          border-radius: 8px;
+          text-align: center;
+          font-size: 16px;
+          font-weight: 400;
+          letter-spacing: 0.08em;
+          cursor: pointer;
+
+          &:first-child {
+            margin-bottom: 10px;
+
+            &:active {
+              opacity: 0.4;
+            }
+          }
+
+          &.delete-enter:active {
+            background-color: $delete;
+          }
+        }
+      }
+    }    
   }
 
   @include responsive('T') {

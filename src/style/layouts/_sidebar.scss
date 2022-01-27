@@ -1,0 +1,50 @@
+.sidebar {
+  display: none;
+  position: fixed;
+  top: 190px;
+  left: 0;
+  width: 100%;
+  z-index: $sidebar-level;
+
+  &.is-active {
+    display: block;
+  }
+  
+  .sidebar-component {
+    @include columns-flexbox();
+    max-width: 400px;
+    margin: 0 auto;
+
+    textarea {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      background-color: $background;
+      border: 1px solid $border;
+      border-radius: 8px;
+      margin-bottom: 20px;
+
+      &::placeholder {
+        opacity: 0.4;
+      }
+    }
+  }
+
+  &-enter {
+    width: 100%;
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: $background;
+      border: 1px solid $border;
+      border-radius: 8px;
+      text-align: center;
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+    }
+  }
+}

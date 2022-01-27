@@ -16,7 +16,8 @@
     }
 
     .tel {
-      a:hover {
+      a:hover,
+      a:active {
         opacity: 0.4;
       }
     }
@@ -70,7 +71,8 @@
         margin-right: 5px;
       }
 
-      &:hover {
+      &:hover,
+      &:active {
         opacity: 0.4;
       }
     }
