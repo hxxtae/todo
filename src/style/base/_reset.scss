@@ -47,7 +47,7 @@ table {
   font-family: 'Noto Sans KR', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: $primary;
+  color: $border;
 }
 
 html {
@@ -57,7 +57,7 @@ html {
 
 body {
   font-family: 'Noto Sans KR', sans-serif;
-  color: $primary;
+  color: $border;
   background-color: $background;
 }
 

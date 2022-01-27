@@ -32,7 +32,6 @@
   }
 
   &-join {
-    width: 100%;
 
     .todo-user-input {
       display: block;
@@ -40,13 +39,22 @@
       padding: 10px;
       margin-bottom: 20px;
       font-size: 16px;
-      background-color: transparent;
-      border: 1px solid $border;
+      background-color: $background;
+      border: 1px solid $primary;
       border-radius: 8px;
-      
+      color: $primary;
+
+      &:focus {
+        border: 1px solid $border;
+        box-shadow: $input-shadow;
+        transition: box-shadow 200ms ease-in-out;
+      }
   
       &::placeholder {
+        font-size: 14px;
+        color: $check;
         opacity: 0.4;
+        transform: translateY(-3px);
       }
     }
 
@@ -56,9 +64,14 @@
       font-size: 16px;
       font-weight: 500;
       letter-spacing: 0.082em;
-      color: $border;
+      color: $primary;
       border: 1px solid $border;
+      background-color: $border;
       border-radius: 8px;
+
+      &:active {
+        opacity: 0.4;
+      }
     }
   }
 
@@ -76,7 +89,8 @@
       width: 100%;
   
       &::after {
-        content: '님 반갑습니다.'
+        content: '님 반갑습니다.';
+        color: $primary;
       }
     }
 
@@ -86,13 +100,19 @@
         display: block;
         width: 100%;
         padding: 10px;
-        font-size: 16px;
-        background-color: transparent;
-        border: 1px solid $border;
-        border-radius: 8px;
         margin-bottom: 20px;
+        background-color: transparent;
+        border: 1px solid $primary;
+        border-radius: 8px;
+        font-size: 16px;
+        color: $primary;
+
+        &:focus {
+          border: 1px solid $border;
+        }
 
         &::placeholder {
+          color: $check;
           opacity: 0.4;
         }
       }
@@ -103,16 +123,19 @@
         button {
           width: 100%;
           padding: 10px;
-          border: 1px solid $border;
+          border: 1px solid $primary;
           border-radius: 8px;
           text-align: center;
           font-size: 16px;
           font-weight: 400;
           letter-spacing: 0.08em;
+          color: $primary;
           cursor: pointer;
 
           &:first-child {
             margin-bottom: 10px;
+            border: 1px solid $border;
+            background-color: $border;
 
             &:active {
               opacity: 0.4;
@@ -120,6 +143,7 @@
           }
 
           &.delete-enter:active {
+            border: 1px solid $border;
             background-color: $delete;
           }
         }

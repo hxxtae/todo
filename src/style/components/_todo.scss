@@ -1,9 +1,10 @@
 .todo {
   display: none;
+  align-self: flex-start;
   width: 100%;
 
   &.is-active {
-    display: block;
+    @include columns-flexbox();
   }
 
   &-timer {
@@ -16,6 +17,7 @@
       strong {
         @include dragunable();
         display: block;
+        color: $primary;
         font-size: 60px;
         transform: translateY(-5px);
       }
@@ -37,12 +39,12 @@
         content: '';
         @include pos-center();
         width: 20px;
-        border-bottom: 2px solid $border;
+        border-bottom: 2px solid $primary;
       }
 
       &:after {
         content: '';
-        border-left: 2px solid $border;
+        border-left: 2px solid $primary;
       }
 
       &:active {
@@ -61,7 +63,7 @@
         content: '';
         @include pos-center();
         width: 20px;
-        border-bottom: 2px solid $border;
+        border-bottom: 2px solid $primary;
       }
 
       &:active {
@@ -119,7 +121,7 @@
           display: inline-block;
           width: 20px;
           height: 20px;
-          border: 1px solid white;
+          border: 1px solid $border;
           border-radius: 4px;
           margin-right: 10px;
           align-self: flex-start;
@@ -144,11 +146,12 @@
             letter-spacing: 0.076em;
             line-height: 24px;
             font-size: 16px;
+            color: $primary;
             cursor: pointer;
           }
 
           &:checked + label {
-            color: $gray;
+            color: $check;
             text-decoration: line-through;
           }
         }
