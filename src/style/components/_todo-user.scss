@@ -1,0 +1,96 @@
+.todo-user {
+  width: 100%;
+  margin-bottom: 40px;
+  @include flexbox();
+
+  &-benar {
+    width: 200px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-join {
+    width: 100%;
+
+    .todo-user-input {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      font-size: 16px;
+      background-color: transparent;
+      border: 1px solid $border;
+      border-radius: 8px;
+      
+  
+      &::placeholder {
+        opacity: 0.4;
+      }
+    }
+
+    button {
+      width: 100%;
+      padding: 5px 0;
+      font-size: 16px;
+      font-weight: 500;
+      letter-spacing: 0.082em;
+      color: $border;
+      border: 1px solid $border;
+      border-radius: 8px;
+    }
+  }
+
+  &-avatar {
+    @include flexbox();
+      margin-bottom: 20px;
+    }
+
+  &-data {
+    @include columns-flexbox();
+
+    .todo-user-name {
+      @include flexbox();
+      width: 100%;
+  
+      &::after {
+        content: '님 반갑습니다.'
+      }
+
+      & + textarea {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        background-color: transparent;
+        border: 1px solid $border;
+        border-radius: 8px;
+
+        &::placeholder {
+          opacity: 0.4;
+        }
+      }
+    }
+
+    
+  }
+
+  @include responsive('T') {
+    align-self: flex-start;
+
+    &-data {
+
+      .todo-user-name {
+        margin-bottom: 40px;
+      }
+    }
+  }
+}

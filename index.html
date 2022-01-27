@@ -4,28 +4,231 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./style.css">
   <title>ToDo</title>
 </head>
 <body>
-  <form id="login-form">
-    <input type="text" name="name" placeholder="What is your name?" required/>
-    <input type="text" name="age" placeholder="What is your age?" required/>
-    <button class="login-button">Log In</button>
-  </form>
-  <div class="div">
-    <div class="container">content1</div>
-    <div class="container">content2</div>
-    <div class="container">content3</div>
-  </div>
+  <header class="todo-header">
+    
+  </header>
 
-  <div class="container">
-    <div class="row">
-      <div class="testCol col-sm-4 col-md-12 col-lg-12">
-        Container block element Size Text.
+  <main class="todo-main">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-4 col-md-12 col-lg-12">
+          <div class="todo-wrapper">
+
+            <section class="todo-user">
+              <!-- 로그인 이전 -->
+              <!-- <form id="loginForm" action="">
+                <div class="todo-user-benar">
+                  <img src="./src/assets/images/below-the-plants.jpg" alt="기본 로그인 이미지">
+                </div>
+                <div class="todo-user-join">
+                  <input type="text" class="todo-user-input" placeholder="닉네임 & 이름 을 입력하세요">
+                  <button type="button">시작</button>
+                </div>
+              </form> -->
+                  <!-- 로그인 이후 -->
+
+              <form id="todoForm" action="">
+                <div class="todo-user-avatar">
+                  <div class="avatar-102">
+                    <img src="" alt="사용자 이미지">
+                  </div>
+                </div>
+                <div class="todo-user-data">
+                  <strong class="todo-user-name">김희태</strong>
+                  <textarea class="todo-add sm-hidden" name="todo-name" id="" cols="30" rows="10" placeholder="오늘 할 일..."></textarea>
+                </div>
+              </form>
+            </section>
+
+            <section class="todo">
+              <div class="todo-timer">
+                <div class="timer">
+                  <strong>00:00</strong>
+                  <button class="add sm-only"></button>
+                </div>
+              </div>
+              <div class="todo-box">
+                <h2 class="visually-hidden">ToDo 리스트</h2>
+                <ul class="todo-list">
+                  <li class="todo-item" id="1">
+                    <div class="todo-item-group">
+                      <input type="checkbox" id="todo-check-1">
+                      <label for="todo-check-1">dfgdgdgdgdf</label>
+                    </div>
+                  </li>
+                  <li class="todo-item" id="2">
+                    <div class="todo-item-group">
+                      <input type="checkbox" id="todo-check-2">
+                      <label for="todo-check-2">일일 일 커밋 하기</label>
+                    </div>
+                  </li>
+                  <li class="todo-item" id="3">
+                    <div class="todo-item-group">
+                      <input type="checkbox" id="todo-check-3">
+                      <label for="todo-check-3">
+                        가나다라 마바사 가나다라 마바사가나다라 마바사가나다라 마바사가나다라 마바사
+                      </label>
+                    </div>
+                  </li>
+                  <li class="todo-item" id="4">
+                    <div class="todo-item-group">
+                      <input type="checkbox" id="todo-check-4">
+                      <label for="todo-check-4">Hello World Global gpq</label>
+                    </div>
+                  </li>
+                  <li class="todo-item" id="4">
+                    <div class="todo-item-group">
+                      <input type="checkbox" id="todo-check-4">
+                      <label for="todo-check-4">Hello World Global gpq</label>
+                    </div>
+                  </li>
+                  <li class="todo-item" id="4">
+                    <div class="todo-item-group">
+                      <input type="checkbox" id="todo-check-4">
+                      <label for="todo-check-4">Hello World Global gpq</label>
+                    </div>
+                  </li>
+                  <li class="todo-item" id="4">
+                    <div class="todo-item-group">
+                      <input type="checkbox" id="todo-check-4">
+                      <label for="todo-check-4">오늘 할 일을 적습니다.
+                        오늘도 아자아자 화이팅~!!!!</label>
+                    </div>
+                  </li>
+                  <li class="todo-item" id="4">
+                    <div class="todo-item-group">
+                      <input type="checkbox" id="todo-check-4">
+                      <label for="todo-check-4">Hello World Global gpq</label>
+                    </div>
+                  </li>
+                  <li class="todo-item" id="4">
+                    <div class="todo-item-group">
+                      <input type="checkbox" id="todo-check-4">
+                      <label for="todo-check-4">Hello World Global gpq</label>
+                    </div>
+                  </li>
+                  <li class="todo-item" id="4">
+                    <div class="todo-item-group">
+                      <input type="checkbox" id="todo-check-4">
+                      <label for="todo-check-4">Hello World Global gpq</label>
+                    </div>
+                  </li>
+                  <li class="todo-item" id="4">
+                    <div class="todo-item-group">
+                      <input type="checkbox" id="todo-check-4">
+                      <label for="todo-check-4">Hello World Global gpq</label>
+                    </div>
+                  </li>
+                  <li class="todo-item" id="4">
+                    <div class="todo-item-group">
+                      <input type="checkbox" id="todo-check-4">
+                      <label for="todo-check-4">Hello World Global gpq</label>
+                    </div>
+                  </li>
+                  <li class="todo-item" id="4">
+                    <div class="todo-item-group">
+                      <input type="checkbox" id="todo-check-4">
+                      <label for="todo-check-4">Hello World Global gpq</label>
+                    </div>
+                  </li>
+                  <li class="todo-item" id="4">
+                    <div class="todo-item-group">
+                      <input type="checkbox" id="todo-check-4">
+                      <label for="todo-check-4">Hello World Global gpq</label>
+                    </div>
+                  </li>
+                  <li class="todo-item" id="4">
+                    <div class="todo-item-group">
+                      <input type="checkbox" id="todo-check-4">
+                      <label for="todo-check-4">Hello World Global gpq</label>
+                    </div>
+                  </li>
+                  <li class="todo-item" id="4">
+                    <div class="todo-item-group">
+                      <input type="checkbox" id="todo-check-4">
+                      <label for="todo-check-4">Hello World Global gpq</label>
+                    </div>
+                  </li>
+                  <li class="todo-item" id="4">
+                    <div class="todo-item-group">
+                      <input type="checkbox" id="todo-check-4">
+                      <label for="todo-check-4">Hello World Global gpq</label>
+                    </div>
+                  </li>
+                  <li class="todo-item" id="4">
+                    <div class="todo-item-group">
+                      <input type="checkbox" id="todo-check-4">
+                      <label for="todo-check-4">Hello World Global gpq</label>
+                    </div>
+                  </li>
+                  <li class="todo-item" id="4">
+                    <div class="todo-item-group">
+                      <input type="checkbox" id="todo-check-4">
+                      <label for="todo-check-4">Hello World Global gpq</label>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </section>
+
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </main>
+
+  <footer class="todo-footer sm-hidden">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-lg-12">
+          <div class="description">
+            <div class="description-left">
+              <dl>
+                <div class="name">
+                  <dt>상호명</dt>
+                  <dd>(주)TODO</dd>
+                </div>
+                <div class="tel">
+                  <dt>전화번호</dt>
+                  <dd>
+                    <a href="tel:01092831468">010-9283-1468</a>
+                  </dd>
+                </div>
+                <div class="address">
+                  <dt>주소</dt>
+                  <dd>경기 파주시 운정</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="description-right">
+              <div class="link-1">
+                <a href="https://github.com/hxxtae/todo">
+                  <i class="ic-github"></i>
+                  <span>github.com</span>
+                </a>
+              </div>
+              <div class="link-2">
+                <a href="https://hxxtae.me">
+                  <i class="ic-myhome"></i>
+                  <span>hxxtae.me</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <aside class="sidebar"></aside>
+
   <script src="./src/js/app.js"></script>
 </body>
 </html>

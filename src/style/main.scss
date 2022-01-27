@@ -1,15 +1,33 @@
-@import './constants/breakpoints';
+// # constants
 @import './constants/grids';
+@import './constants/breakpoints';
+@import './constants/colors';
+@import './constants/demensions';
 
+// # base
 @import './base/fonts';
 @import './base/global';
 @import './base/reset';
 
+// # mixins
 @import './mixins/flexbox';
 @import './mixins/position';
 @import './mixins/responsive';
+@import './mixins/truncate';
+@import './mixins/line-clamp';
+@import './mixins/scrollbar';
+@import './mixins/dragable';
 
-@import './components/test.scss';
+// # modules
+@import './modules/avatar';
+@import './modules/icons';
 
-//@import './layouts/grids';
-@import './layouts/gridexam';
+// # components
+@import './components/todo-user';
+@import './components/todo';
+@import './components/description';
+
+// # layouts
+@import './layouts/grids';
+@import './layouts/todo-main';
+@import './layouts/todo-footer';

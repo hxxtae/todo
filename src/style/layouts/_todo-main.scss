@@ -1,0 +1,18 @@
+.todo-main {
+  border: 1px solid white;
+  height: 100vh;
+  
+  .todo-wrapper {
+    @include columns-flexbox();
+    padding-top: 40px;
+  }
+
+  @include responsive('T') {
+    .todo-wrapper {
+      padding-top: 70px;
+      flex-direction: row;
+    }
+  }
+}
+
+

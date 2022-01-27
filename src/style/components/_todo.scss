@@ -1,0 +1,103 @@
+.todo {
+  width: 100%;
+
+  &-timer {
+      width: 100%;
+      margin-bottom: 40px;
+      
+    .timer {
+      @include flexbox(around);
+
+      strong {
+        @include dragunable();
+        display: block;
+        font-size: 60px;
+        transform: translateY(-5px);
+      }
+
+      .add {
+        width: 50px;
+        height: 50px;
+        border: 1px solid $border;
+        border-radius: 8px;
+        position: relative;
+
+        &:before {
+          content: '';
+          width: 20px;
+          border-bottom: 2px solid $border;
+          @include pos-center();
+        }
+
+        &:after {
+          content: '';
+          border-left: 2px solid $border;
+        }
+
+        &:hover {
+          opacity: 0.4;
+        }
+      }
+    }
+  }
+  
+  &-box {
+    @include no-scrollbar();
+    width: 100%;
+    max-height: calc(100vh - #{$todo-user-sm-height});
+    overflow: scroll;
+      
+    .todo-list {
+      @include columns-flexbox();
+    }
+    
+    .todo-item {
+      width: 100%;
+      padding: 8px 0;
+
+      &-group {
+        @include flexbox(start);
+        padding: 0 20px;
+
+        input[type="checkbox"] {
+          appearance: none;
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          border: 1px solid white;
+          border-radius: 4px;
+          margin-right: 10px;
+          align-self: flex-start;
+          flex-shrink: 0;
+          cursor: pointer;
+          position: relative;
+          top: 3px;
+          left: 0;
+
+          &:checked::before {
+            content: '✔️';
+            position: absolute;
+            top: 0;
+            left: 0;
+          }
+
+          & + label {
+            @include line-clamp(2);
+            @include dragunable();
+            //@include truncate();
+            height: 100%;
+            letter-spacing: 0.076em;
+            line-height: 24px;
+            font-size: 16px;
+            cursor: pointer;
+          }
+
+          &:checked + label {
+            color: $gray;
+            text-decoration: line-through;
+          }
+        }
+      }
+    }
+  }
+}

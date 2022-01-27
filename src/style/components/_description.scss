@@ -1,0 +1,79 @@
+.description {
+  @include flexbox(between);
+  font-size: 12px;
+  padding: 20px;
+
+  &-left {
+    dl {
+      @include flexbox();
+    }
+
+    .name,
+    .tel,
+    .address {
+      @include flexbox(start);
+      margin-right: 15px;
+    }
+
+    .tel {
+      a:hover {
+        opacity: 0.4;
+      }
+    }
+
+    dt {
+      color: $gray;
+      font-weight: 400;
+
+      &:after {
+        content: ':';
+        display: inline-block;
+        padding: 0 4px;
+      }
+    }
+
+    dd {
+      color: $gray;
+      font-weight: 300;
+
+      &:after {
+        content: '|';
+        display: inline-block;
+        padding-left: 15px;
+      }
+    }
+
+    .address {
+      margin-right: 0;
+
+      dd:after {
+        display: none;
+      }
+    }
+  }
+
+  &-right {
+    @include flexbox();
+
+    .link-1 {
+      margin-right: 20px;
+    }
+
+    a {
+      @include flexbox();
+
+      i, span {
+        color: $gray;
+      }
+
+      i {
+        margin-right: 5px;
+      }
+
+      &:hover {
+        opacity: 0.4;
+      }
+    }
+  }
+  
+}

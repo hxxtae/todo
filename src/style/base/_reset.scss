@@ -44,19 +44,21 @@ table {
 * {
   margin: 0;
   box-sizing: border-box;
-  // font-family: $font-main;
+  font-family: 'Noto Sans KR', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: $primary;
 }
 
 html {
-  // font-family: $font-main;
+  font-family: 'Noto Sans KR', sans-serif;
   // font-size: $font-size-16;
 }
 
 body {
-  // font-family: $font-main;
-  // color: $primary;
+  font-family: 'Noto Sans KR', sans-serif;
+  color: $primary;
+  background-color: $background;
 }
 
 h1 {
