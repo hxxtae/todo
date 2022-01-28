@@ -32,7 +32,7 @@ todoCheckSubmit();
 
 
 // [any]
-setInterval(timerPlay, 1000);
+setInterval(timerPlay, 500);
 
 
 
