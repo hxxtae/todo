@@ -154,6 +154,10 @@
               opacity: 0.4;
             }
           }
+
+          &:last-child {
+            transition: background-color 300ms ease-in;
+          }
           
           &:last-child:active {
             border: 1px solid $border;

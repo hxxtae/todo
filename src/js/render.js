@@ -1,5 +1,4 @@
 const username = localStorage.getItem('userid');
-
 const joinForm = document.querySelector('.todo-user .join');
 const loginForm = document.querySelector('.todo-user .login');
 const todoSection = document.querySelector('.todo');

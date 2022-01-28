@@ -58,6 +58,7 @@
       border: 1px solid $border;
       border-radius: 8px;
       position: relative;
+      transition: background-color 300ms ease-in-out;
 
       &:before {
         content: '';
