@@ -1,5 +1,7 @@
 import { requireRule, textNotSpace, textMinimumLength } from './constants/contacts.js';
+import render from './render.js';
 import template from './login-template.js';
+import { userNameKey } from './constants/base.js';
 
 const loginForm = document.querySelector('.todo-user .join');
 const inputDiv = loginForm.querySelector('.todo-user-join');
@@ -19,8 +21,8 @@ function onSubmit(e) {
   
   if (active) {
     console.log("submit");
-    localStorage.setItem('userid', `${userInfo.userid}`);
-    location.reload();
+    localStorage.setItem(userNameKey, `${userInfo.userid}`);
+    render();
   } else {
     console.log('false');
   }
@@ -31,7 +33,6 @@ export function loginFormSubmit() {
 }
 
 function onChange(e) {
-  // validateRule
   const value = e.target.value;
   const validate = validateRule.filter(item => item.rule.test(value) !== item.match);
   const isValid = validate[0] ? validate[0] : null;
@@ -43,7 +44,6 @@ function onChange(e) {
     active = false;
   }
 
-  // update
   const message = isValid ? isValid.message : '';
   const newElement = template(message, value);
   const newdiv = document.createElement('div');
