@@ -1,6 +1,5 @@
 import template from './render-template.js';
 import { userNameKey, userTodoKey } from './constants/base.js';
-import timerPlay from './util/clock.js';
 
 const joinForm = document.querySelector('.todo-user .join');
 const loginForm = document.querySelector('.todo-user .login');
@@ -45,7 +44,6 @@ function render() {
     todoSection.classList.add('is-active');
     onUsername();
     onUserTodo();
-    timerPlay();
   
   } else {
     joinForm.classList.remove('is-hidden');

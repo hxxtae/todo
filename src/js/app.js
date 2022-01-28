@@ -4,6 +4,7 @@ import { todoOpenPopup, todoClosePopup } from './control/popup-control.js';
 import { todoDeleteOnOff, todoDelete } from './control/delete-control.js';
 import { todoAddSubmit } from './control/add-control.js';
 import { todoCheckSubmit } from './control/check-control.js';
+import timerPlay from './util/clock.js';
 
 // [start]
 // Event(input & form)
@@ -29,6 +30,9 @@ todoAddSubmit();
 // Event(checkbox)
 todoCheckSubmit();
 
+
+// [any]
+setInterval(timerPlay, 1000);
 
 
 
