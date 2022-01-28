@@ -20,3 +20,7 @@ export function todoClosePopup() {
   const closeButton = document.querySelector('.sidebar .add-close i');
   closeButton.addEventListener('click', onClose);
 }
+
+export function closePopup() {
+  onClose();
+}
