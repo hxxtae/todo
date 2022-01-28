@@ -14,21 +14,25 @@ const userInfo = {
   userid: ''
 }
 
-// form : submit
-loginForm.addEventListener('submit', (e) => {
+function onSubmit(e) {
   e.preventDefault();
-
+  
   if (active) {
     console.log("submit");
     localStorage.setItem('userid', `${userInfo.userid}`);
+    location.reload();
   } else {
     console.log('false');
   }
-});
+}
+
+export function loginFormSubmit() {
+  loginForm.addEventListener('submit', onSubmit);
+}
 
 
-// form : change(input)
-loginForm.addEventListener('change', (e) => {
+
+function onChange(e) {
   // validateRule
   const value = e.target.value;
   const validate = validateRule.filter(item => item.rule.test(value) !== item.match);
@@ -47,7 +51,12 @@ loginForm.addEventListener('change', (e) => {
   const newdiv = document.createElement('div');
   newdiv.innerHTML = newElement;
   inputDiv.innerHTML = newdiv.innerHTML; // (A)
-});
+}
+
+export function loginFormChange() {
+  loginForm.addEventListener('change', onChange);
+}
+
 
 
 
