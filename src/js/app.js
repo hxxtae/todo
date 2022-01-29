@@ -32,6 +32,7 @@ todoCheckSubmit();
 
 
 // [any]
+timerPlay();
 setInterval(timerPlay, 500);
 
 
