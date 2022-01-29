@@ -3,4 +3,5 @@
   -webkit-line-clamp: $line;
   -webkit-box-orient: vertical;
   overflow: hidden;
+  word-break: break-all; // ★★★ 영믄 입력시 line-clamp 적용
 }
