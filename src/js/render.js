@@ -1,5 +1,11 @@
 import template from './render-template.js';
+import { loginFormChange, loginFormSubmit } from './login.js';
+import { todoOpenPopup, todoClosePopup } from './control/popup-control.js';
+import { todoDeleteOnOff, todoDelete } from './control/delete-control.js';
+import { todoAddSubmit } from './control/add-control.js';
+import { todoCheckSubmit } from './control/check-control.js';
 import { userNameKey, userTodoKey } from './constants/base.js';
+import timerPlay from './util/clock.js';
 
 const joinForm = document.querySelector('.todo-user .join');
 const loginForm = document.querySelector('.todo-user .login');
@@ -42,13 +48,40 @@ function render() {
     joinForm.classList.add('is-hidden');
     loginForm.classList.add('is-active');
     todoSection.classList.add('is-active');
+    // [userInfo API]
+    // LocalStorage
     onUsername();
     onUserTodo();
+    // [popup]
+    // Event(button)
+    todoOpenPopup();
+    todoClosePopup();
+
+    // [delete]
+    // Event(button)
+    todoDeleteOnOff();
+    todoDelete();
+
+    // [add]
+    // Event(button)
+    todoAddSubmit();
+
+    // [check]
+    // Event(checkbox)
+    todoCheckSubmit();
+
+    // [any]
+    timerPlay();
+    setInterval(timerPlay, 500);
   
   } else {
     joinForm.classList.remove('is-hidden');
     loginForm.classList.remove('is-active');
     todoSection.classList.remove('is-active');
+    // [start]
+    // Event(input & form)
+    loginFormChange();
+    loginFormSubmit();
   }
 }
 

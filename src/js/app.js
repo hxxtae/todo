@@ -1,41 +1,7 @@
-import { loginFormChange, loginFormSubmit } from './login.js';
 import render from './render.js';
-import { todoOpenPopup, todoClosePopup } from './control/popup-control.js';
-import { todoDeleteOnOff, todoDelete } from './control/delete-control.js';
-import { todoAddSubmit } from './control/add-control.js';
-import { todoCheckSubmit } from './control/check-control.js';
-import timerPlay from './util/clock.js';
 
-// [start]
-// Event(input & form)
-loginFormChange();
-loginFormSubmit();
+
 render();
-
-// [popup]
-// Event(button)
-todoOpenPopup();
-todoClosePopup();
-
-// [delete]
-// Event(button)
-todoDeleteOnOff();
-todoDelete();
-
-// [add]
-// Event(button)
-todoAddSubmit();
-
-// [check]
-// Event(checkbox)
-todoCheckSubmit();
-
-
-// [any]
-timerPlay();
-setInterval(timerPlay, 500);
-
-
 
 // [잠간 짚고가기] ★★★
 // ※ 항상 HTML을 다시 그릴 때 이벤트 재할당은
